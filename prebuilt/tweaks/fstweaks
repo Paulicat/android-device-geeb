@@ -1,0 +1,12 @@
+#!/system/bin/sh
+
+#Filesystem tweaks
+mount -o remount,ro,noatime,nodiratime -t ext3 /dev/block/mmcblk0p25 /system
+mount -o remount,rw,noatime,nodiratime -t ext3 /dev/block/mmcblk0p26 /data
+mount -o remount,rw,noatime,nodiratime -t ext3 /dev/block/mmcblk0p27 /cache
+
+#Minfree tweaks
+echo "2048,3072,6144,15360,17920,20480"  > /sys/module/lowmemorykiller/parameters/minfree
+
+
+
