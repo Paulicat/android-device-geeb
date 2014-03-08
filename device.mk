@@ -208,6 +208,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.telephony.slowModem=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.ril.tx_headphone_override=Handset
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.telephony.call_stat_poll=true
+
 #Upto 3 layers can go through overlays
 PRODUCT_PROPERTY_OVERRIDES += debug.mdpcomp.maxlayer=3
 
