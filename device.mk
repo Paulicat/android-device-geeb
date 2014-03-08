@@ -22,8 +22,11 @@
 DEVICE_PACKAGE_OVERLAYS := device/lge/geeb/overlay
 
 
+#PRODUCT_COPY_FILES += \
+#    device/lge/geeb/prebuilt/bootanimation.zip:system/media/bootanimation.zip
+
 PRODUCT_COPY_FILES += \
-    device/lge/geeb/prebuilt/bootanimation.zip:system/media/bootanimation.zip
+    device/lge/geeb/prebuilt/ROMControl.apk:system/app/ROMControl.apk
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -156,208 +159,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
-# \
-#    device/lge/geeb/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
 
-#NexusLouder
 PRODUCT_COPY_FILES += \
-    device/lge/geeb/prebuilt/louder/system/bin/alsa_amixer:system/bin/alsa_amixer \
-    device/lge/geeb/prebuilt/louder/system/bin/sound8x60:system/bin/sound8x60 \
-    device/lge/geeb/prebuilt/louder/system/bin/alsa_aplay:system/bin/alsa_aplay \
-    device/lge/geeb/prebuilt/louder/system/bin/alsa_ctl:system/bin/alsa_ctl \
-    device/lge/geeb/prebuilt/louder/system/bin/awesome:system/bin/awesome \
-    device/lge/geeb/prebuilt/louder/system/bin/basimage_ibeats_solo.bin:system/bin/basimage_ibeats_solo.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/basimage_ibeats.bin:system/bin/basimage_ibeats.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/basimage_ibeats_solo_x.bin:system/bin/basimage_ibeats_solo_x.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/basimage_ibeats_x.bin:system/bin/basimage_ibeats_x.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/beatsbass:system/bin/beatsbass \
-    device/lge/geeb/prebuilt/louder/system/bin/beatsnormal:system/bin/beatsnormal \
-    device/lge/geeb/prebuilt/louder/system/bin/dynimage_ibeats_solo.bin:system/bin/dynimage_ibeats_solo.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/dynimage_ibeats_solo_x.bin:system/bin/dynimage_ibeats_solo_x.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/dynimage_ibeats_x.bin:system/bin/dynimage_ibeats_x.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/mm-audio-acdb-test:system/bin/mm-audio-acdb-test \
-    device/lge/geeb/prebuilt/louder/system/bin/mm-jpeg-dec-test-client:system/bin/mm-jpeg-dec-test-client \
-    device/lge/geeb/prebuilt/louder/system/bin/mm-jpeg-enc-test-client:system/bin/mm-jpeg-enc-test-client \
-    device/lge/geeb/prebuilt/louder/system/bin/mm-venc-omx-test720p:system/bin/mm-venc-omx-test720p \
-    device/lge/geeb/prebuilt/louder/system/bin/mm-video-encdrv-test:system/bin/mm-video-encdrv-test \
-    device/lge/geeb/prebuilt/louder/system/bin/mm-audio-alsa-test:system/bin/mm-audio-alsa-test \
-    device/lge/geeb/prebuilt/louder/system/bin/peqimage_ibeats.bin:system/bin/peqimage_ibeats.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/peqimage_ibeats_solo.bin:system/bin/peqimage_ibeats_solo.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/peqimage_ibeats_solo_x.bin:system/bin/peqimage_ibeats_solo_x.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/peqimage_ibeats_x.bin:system/bin/peqimage_ibeats_x.bin \
-    device/lge/geeb/prebuilt/louder/system/bin/snd:system/bin/snd \
-    device/lge/geeb/prebuilt/louder/system/bin/snd3254:system/bin/snd3254 \
-    device/lge/geeb/prebuilt/louder/system/bin/snd8k:system/bin/snd8k \
-    device/lge/geeb/prebuilt/louder/system/bin/sony_sysd:system/bin/sony_sysd \
-    device/lge/geeb/prebuilt/louder/system/bin/sound:system/bin/sound \
-    device/lge/geeb/prebuilt/louder/system/bin/sound8960:system/bin/sound8960 \
-    device/lge/geeb/prebuilt/louder/system/bin/spkamp:system/bin/spkamp \
-    device/lge/geeb/prebuilt/louder/system/etc/AudioFilterProduct.csv:system/etc/AudioFilterProduct.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    device/lge/geeb/prebuilt/louder/system/etc/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/dynimage_gec_x.bin:system/etc/dynimage_gec_x.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/dynimage_gec_bt.bin:system/etc/dynimage_gec_bt.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/peqimage_ibeats_solo_x.bin:system/etc/peqimage_ibeats_solo_x.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/peqimage_ibeats_solo.bin:system/etc/peqimage_ibeats_solo.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/peqimage_ibeats_pro.bin:system/etc/peqimage_ibeats_pro.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/peqimage_ibeats.bin:system/etc/peqimage_ibeats.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/Volume.db:system/etc/Volume.db \
-    device/lge/geeb/prebuilt/louder/system/etc/TPA2051_CFG_XC.csv:system/etc/TPA2051_CFG_XC.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/peqimage_gec_x.bin:system/etc/peqimage_gec_x.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/dynimage_gec.bin:system/etc/dynimage_gec.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/AudioFilterPlatform.csv:system/etc/AudioFilterPlatform.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/peqimage_gec_bt.bin:system/etc/peqimage_gec_bt.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/CodecDSPID_WB.txt:system/etc/CodecDSPID_WB.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/TPA2051_CFG_BEATS_HW.csv:system/etc/TPA2051_CFG_BEATS_HW.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/peqimage_gec.bin:system/etc/peqimage_gec.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/CodecDSPID.txt:system/etc/CodecDSPID.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/audio_effects.conf:system/etc/audio_effects.conf \
-    device/lge/geeb/prebuilt/louder/system/etc/stream_speaker.txt:system/etc/stream_speaker.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/lge/geeb/prebuilt/louder/system/etc/be_photo:system/etc/be_photo \
-    device/lge/geeb/prebuilt/louder/system/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/stream_headset.txt:system/etc/stream_headset.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
-    device/lge/geeb/prebuilt/louder/system/etc/be_movie:system/etc/be_movie \
-    device/lge/geeb/prebuilt/louder/system/etc/stream_earpiece.txt:system/etc/stream_earpiece.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    device/lge/geeb/prebuilt/louder/system/etc/basimage_ibeats_x.bin:system/etc/basimage_ibeats_x.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/asound.conf:system/etc/asound.conf \
-    device/lge/geeb/prebuilt/louder/system/etc/SRSAudioFilter.csv:system/etc/SRSAudioFilter.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/lmfilter.txt:system/etc/lmfilter.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/basimage_ibeats_studio.bin:system/etc/basimage_ibeats_studio.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/AIC3254_REG_XD.csv:system/etc/AIC3254_REG_XD.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/Sound_Original.txt:system/etc/Sound_Original.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/HP_Video.csv:system/etc/HP_Video.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/basimage_ibeats_solo_x.bin:system/etc/basimage_ibeats_solo_x.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/HP_Audio.csv:system/etc/HP_Audio.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/basimage_ibeats_solo.bin:system/etc/basimage_ibeats_solo.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/soundbooster.txt:system/etc/soundbooster.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/eqfilter.txt:system/etc/eqfilter.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/basimage_ibeats_pro.bin:system/etc/basimage_ibeats_pro.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/AIC3008_REG_DualMic_XC.csv:system/etc/AIC3008_REG_DualMic_XC.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/situation.txt:system/etc/situation.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/dynimage_ibeats_x.bin:system/etc/dynimage_ibeats_x.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/basimage_ibeats.bin:system/etc/basimage_ibeats.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/AIC3008_REG_DualMic.csv:system/etc/AIC3008_REG_DualMic.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/dynimage_ibeats_studio.bin:system/etc/dynimage_ibeats_studio.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/basimage_gec_x.bin:system/etc/basimage_gec_x.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/aeqcoe.txt:system/etc/aeqcoe.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/peqimage_ibeats_x.bin:system/etc/peqimage_ibeats_x.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/dynimage_ibeats_solo_x.bin:system/etc/dynimage_ibeats_solo_x.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/basimage_gec_bt.bin:system/etc/basimage_gec_bt.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/peqimage_ibeats_studio.bin:system/etc/peqimage_ibeats_studio.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/dynimage_ibeats_solo.bin:system/etc/dynimage_ibeats_solo.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/basimage_gec.bin:system/etc/basimage_gec.bin \
-    device/lge/geeb/prebuilt/louder/system/etc/AdieHWCodec_BEATS_HW.csv:system/etc/AdieHWCodec_BEATS_HW.csv \
-    device/lge/geeb/prebuilt/louder/system/etc/audio/aeqcoe.txt:system/etc/audio/aeqcoe.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/audio/lmfilter.txt:system/etc/audio/lmfilter.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/audio/stream_headset.txt:system/etc/audio/stream_headset.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/audio/eqfilter.txt:system/etc/audio/eqfilter.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/audio/situation.txt:system/etc/audio/situation.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/audio/stream_earpiece.txt:system/etc/audio/stream_earpiece.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/audio/stream_speaker.txt:system/etc/audio/stream_speaker.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/permissions/com.sonyericsson.audioeffectif.xml:system/etc/permissinos/com.sonyericsson.audioeffectif.xml \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/srsfx_trumedia_music_wide.cfg:system/etc/soundimage/srsfx_trumedia_music_wide.cfg \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/srsfx_trumedia_movie.cfg:system/etc/soundimage/srsfx_trumedia_movie.cfg \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/srsfx_trumedia_51.cfg:system/etc/soundimage/srsfx_trumedia_51.cfg \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/srs_bypass.cfg:system/etc/soundimage/srs_bypass.cfg \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Treble_Booster.txt:system/etc/soundimage/Sound_Treble_Booster.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_SRS_V_SPK.txt:system/etc/soundimage/Sound_SRS_V_SPK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_SRS_V_HP.txt:system/etc/soundimage/Sound_SRS_V_HP.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_SRS_A_SPK.txt:system/etc/soundimage/Sound_SRS_A_SPK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_SRS_A_HP.txt:system/etc/soundimage/Sound_SRS_A_HP.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Rock.txt:system/etc/soundimage/Sound_Rock.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Rec_Portrait.txt:system/etc/soundimage/Sound_Rec_Portrait.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Recording.txt:system/etc/soundimage/Sound_Recording.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Recording_Mono.txt:system/etc/soundimage/Sound_Recording_Mono.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Rec_Landscape.txt:system/etc/soundimage/Sound_Rec_Landscape.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_R_B.txt:system/etc/soundimage/Sound_R_B.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Pop.txt:system/etc/soundimage/Sound_Pop.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Piano.txt:system/etc/soundimage/Sound_Piano.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_SPK_WB.txt:system/etc/soundimage/Sound_Phone_Original_SPK_WB.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_SPK.txt:system/etc/soundimage/Sound_Phone_Original_SPK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_SPK_BCLK.txt:system/etc/soundimage/Sound_Phone_Original_SPK_BCLK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_REC_WB.txt:system/etc/soundimage/Sound_Phone_Original_REC_WB.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_REC.txt:system/etc/soundimage/Sound_Phone_Original_REC.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_REC_NEL.txt:system/etc/soundimage/Sound_Phone_Original_REC_NEL.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_REC_BCLK.txt:system/etc/soundimage/Sound_Phone_Original_REC_BCLK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_HP_WB.txt:system/etc/soundimage/Sound_Phone_Original_HP_WB.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_HP.txt:system/etc/soundimage/Sound_Phone_Original_HP.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Phone_Original_HP_BCLK.txt:system/etc/soundimage/Sound_Phone_Original_HP_BCLK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Original.txt:system/etc/soundimage/Sound_Original.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Original_SPK.txt:system/etc/soundimage/Sound_Original_SPK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Original_SPK_MFG.txt:system/etc/soundimage/Sound_Original_SPK_MFG.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Original_SPK_BCLK.txt:system/etc/soundimage/Sound_Original_SPK_BCLK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Original_Recording.txt:system/etc/soundimage/Sound_Original_Recording.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Original_Recording_BCLK.txt:system/etc/soundimage/Sound_Original_Recording_BCLK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Original_Rec_MFG.txt:system/etc/soundimage/Sound_Original_Rec_MFG.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Original_BCLK.txt:system/etc/soundimage/Sound_Original_BCLK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_New_Age.txt:system/etc/soundimage/Sound_New_Age.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_MFG.txt:system/etc/soundimage/Sound_MFG.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Latin.txt:system/etc/soundimage/Sound_Latin.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Jazz.txt:system/etc/soundimage/Sound_Jazz.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Dualmic.txt:system/etc/soundimage/Sound_Dualmic.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Dualmic_SPK.txt:system/etc/soundimage/Sound_Dualmic_SPK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Dualmic_EP.txt:system/etc/soundimage/Sound_Dualmic_EP.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Dolby_V_SPK.txt:system/etc/soundimage/Sound_Dolby_V_SPK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Dolby_V_HP.txt:system/etc/soundimage/Sound_Dolby_V_HP.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Dolby_A_SPK.txt:system/etc/soundimage/Sound_Dolby_A_SPK.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Dolby_A_HP.txt:system/etc/soundimage/Sound_Dolby_A_HP.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Country.txt:system/etc/soundimage/Sound_Country.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Classical.txt:system/etc/soundimage/Sound_Classical.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Blues.txt:system/etc/soundimage/Sound_Blues.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Beats.txt:system/etc/soundimage/Sound_Beats.txt \
-    device/lge/geeb/prebuilt/louder/system/etc/soundimage/Sound_Bass_Booster.txt:system/etc/soundimage/Sound_Bass_Booster.txt \
-    device/lge/geeb/prebuilt/louder/system/framework/semc_audioeffectif.jar:system/framework/semc_audioeffectif.jar \
-    device/lge/geeb/prebuilt/louder/system/lib/libaudioalsa.so:system/lib/libaudioalsa.so \
-    device/lge/geeb/prebuilt/louder/system/lib/libaudioeffect_jni.so:system/lib/libaudioeffect_jni.so \
-    device/lge/geeb/prebuilt/louder/system/lib/libaudioflinger.so:system/lib/libaudioflinger.so \
-    device/lge/geeb/prebuilt/louder/system/lib/libbeatscorehtc.so:system/lib/libbeatscorehtc.so \
-    device/lge/geeb/prebuilt/louder/system/lib/libsrscorehtc.so:system/lib/libsrscorehtc.so \
-    device/lge/geeb/prebuilt/louder/system/lib/libsrsprocessing.so:system/lib/libsrsprocessing.so \
-    device/lge/geeb/prebuilt/louder/system/lib/libswiqisettinghelper.so:system/lib/libswiqisettinghelper.so \
-    device/lge/geeb/prebuilt/louder/system/lib/libtinyalsa.so:system/lib/libtinyalsa.so \
-    device/lge/geeb/prebuilt/louder/system/lib/hw/alsa.msm8960.so:system/lib/hw/alsa.msm8960.so \
-    device/lge/geeb/prebuilt/louder/system/lib/hw/audio_policy.default.so:system/lib/hw/audio_policy.default.so \
-    device/lge/geeb/prebuilt/louder/system/lib/hw/audio.primary.default.so:system/lib/hw/audio.primary.default.so \
-    device/lge/geeb/prebuilt/louder/system/lib/hw/audio.r_submix.default.so:system/lib/hw/audio.r_submix.default.so \
-    device/lge/geeb/prebuilt/louder/system/lib/hw/audio.usb.default.so:system/lib/hw/audio.usb.default.so \
-    device/lge/geeb/prebuilt/louder/system/lib/hw/audio.primary.msm8960.so:system/lib/hw/audio.primary.msm8960.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libaudiopreprocessing.so:system/lib/soundfx/libaudiopreprocessing.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libbeatsbass.so:system/lib/soundfx/libbeatsbass.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libbundlewrapper.so:system/lib/soundfx/libbundlewrapper.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libclearaudiowrapper.so:system/lib/soundfx/libclearaudiowrapper.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libcyanogen-dsp.so:system/lib/soundfx/libcyanogen-dsp.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libdownmix.so:system/lib/soundfx/libdownmix.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libfnrwrapper.so:system/lib/soundfx/libfnrwrapper.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libhearingprotection.so:system/lib/soundfx/libhearingprotection.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libposteffectwrapper.so:system/lib/soundfx/libposteffectwrapper.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libpreeffectwrapper.so:system/lib/soundfx/libpreeffectwrapper.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libreverbwrapper.so:system/lib/soundfx/libreverbwrapper.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libsoundaurawrapper.so:system/lib/soundfx/libsoundaurawrapper.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libsrscore.so:system/lib/soundfx/libsrscore.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libsrsfx.so:system/lib/soundfx/libsrsfx.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libsrstb.so:system/lib/soundfx/libsrstb.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libvisualizer.so:system/lib/soundfx/libvisualizer.so \
-    device/lge/geeb/prebuilt/louder/system/lib/soundfx/libvptwrapper.so:system/lib/soundfx/libvptwrapper.so \
-    device/lge/geeb/prebuilt/louder/system/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-
-
-
-
+	device/lge/geeb/prebuilt/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+	device/lge/geeb/prebuilt/audio_effects.conf:system/etc/audio_effects.conf \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=131072

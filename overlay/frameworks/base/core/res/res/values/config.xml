@@ -20,16 +20,28 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- If this is true, the screen will fade off. -->
-    <bool name="config_animateScreenLights">false</bool>
+    <bool name="config_animateScreenLights">true</bool>
 
-    <!-- Default color for notification LED is white. -->
-    <color name="config_defaultNotificationColor">#0000ff00</color>
+    <!-- Default color for notification LED is green. -->
+    <color name="config_defaultNotificationColor">#0000FF00</color>
 
     <!-- Default LED on time for notification LED in milliseconds. -->
     <integer name="config_defaultNotificationLedOn">500</integer>
 
     <!-- Default LED off time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOff">1000</integer>
+    <integer name="config_defaultNotificationLedOff">2000</integer>
+
+    <!-- Default value for led color when battery is low on charge: <= 14% -->
+    <integer name="config_notificationsBatteryLowARGB">0xFFFF0000</integer>
+
+    <!-- Default value for led color when battery is medium charged: 15-69% -->
+    <integer name="config_notificationsBatteryMediumARGB">0xFFFF0000</integer>
+
+    <!-- Default value for led color when batter is almost charged: 70-99% -->
+    <integer name="config_notificationsBatteryAlmostARGB">0xFFFF0000</integer>
+
+    <!-- Default value for led color when battery is fully charged: 100% -->
+    <integer name="config_notificationsBatteryFullARGB">0x0000FF00</integer>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
@@ -99,23 +111,7 @@
         <item>255</item>
         <item>255</item>
         <item>255</item>
-    </integer-array>
-    <!-- Nexus 4 does not have virtual keys
-    <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
-	-->
+    </integer-array>   
 
     <!-- Minimum screen brightness allowed by the power manager. -->
     <integer name="config_screenBrightnessDim">1</integer>
