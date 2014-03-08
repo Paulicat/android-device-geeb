@@ -44,7 +44,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=geeb lpj=
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
 # Try to build the kernel
-TARGET_KERNEL_CONFIG := geeb_f_defconfig
+TARGET_KERNEL_CONFIG := geeb_defconfig
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_FLUENCE_INCALL := true
@@ -97,7 +97,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_USES_SECURE_SERVICES := false
 
 # Use multiple asserts model
-TARGET_OTA_ASSERT_DEVICE := geehrc,geehrc4g,geehrc_sp,geehrc_sp4g,ls970,gee_sp,geebus,geeb
+TARGET_OTA_ASSERT_DEVICE := geehrc,geehrc4g,geehrc_sp,geehrc_sp4g,ls970,gee_sp,geebus,geeb,e973
 
 BOARD_USES_EXTRA_THERMAL_SENSOR := true
 BOARD_USES_CAMERA_FAST_AUTOFOCUS := true

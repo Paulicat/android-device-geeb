@@ -21,12 +21,14 @@
 
 DEVICE_PACKAGE_OVERLAYS := device/lge/geeb/overlay
 
-
-#PRODUCT_COPY_FILES += \
-#    device/lge/geeb/prebuilt/bootanimation.zip:system/media/bootanimation.zip
+PRODUCT_COPY_FILES += \
+    device/lge/geeb/prebuilt/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_COPY_FILES += \
     device/lge/geeb/prebuilt/ROMControl.apk:system/app/ROMControl.apk
+
+PRODUCT_COPY_FILES += \
+    device/lge/geeb/prebuilt/tweaks/kerneltweaks:system/etc/init.d/kerneltweaks
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -42,21 +44,8 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
-PRODUCT_PACKAGES += \
-    HoloLauncher \
-    Term \
-    FileManager \
-    com.noozxoidelabs.eizo.rewirepro.2.0.1.13 \
-    app.dogsbark.noozxoidelabs.noozy.3.0.2.3 \
-    AudioEffectService \
-    DolbyMobile \
-    SwiqiSettingsService \
-    Trickster
-
-#Prebuilt Apps Libs
+#Prebuilt tweaks
 PRODUCT_COPY_FILES += \
-    device/lge/geeb/prebuilt/apps/Term/libjackpal-androidterm3.so:system/lib/libjackpal-androidterm3.so \
-    device/lge/geeb/prebuilt/apps/Term/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
     device/lge/geeb/prebuilt/tweaks/fstweaks:system/etc/init.d/fstweaks \
     device/lge/geeb/prebuilt/tweaks/95-cameraimprove.sh:system/addon.d/95-cameraimprove.sh \
 
@@ -214,6 +203,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.call_ring.multiple=0
+
+# Our Modem responds slowly
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.telephony.slowModem=1
 
 #Upto 3 layers can go through overlays
 PRODUCT_PROPERTY_OVERRIDES += debug.mdpcomp.maxlayer=3

@@ -1,0 +1,19 @@
+echo 45 45 > /sys/kernel/sound_control/gpl_headphone_gain
+echo 45 > /sys/kernel/sound_control/gpl_speaker_gain
+
+#Colour tweaks
+echo "208 114 21 118 0 0 0 80 48 2" > /sys/devices/platform/mipi_lgit.1537/kgamma_r
+echo "210 114 21 118 0 0 0 80 48 2" > /sys/devices/platform/mipi_lgit.1537/kgamma_g
+echo "212 114 21 118 0 0 0 80 48 2" > /sys/devices/platform/mipi_lgit.1537/kgamma_b
+echo "255 255 255" > /sys/devices/platform/kcal_ctrl.0/kcal
+echo 1 > /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
+
+#Retrieve baseband info
+setprop gsm.version.baseband `strings /dev/block/platform/msm_sdcc.1/by-name/modem | grep M9615A-C | head -1`
+
+iptables -A bw_FORWARD -i !lo+
+iptables -A natctrl_FORWARD -j RETURN -i rmnet+ -o wlan0 -m state --state RELATED,ESTABLISHED
+iptables -A natctrl_FORWARD -j DROP -i wlan0 -o rmnet+ -m state --state INVALID
+iptables -A natctrl_FORWARD -j RETURN -i wlan0 -o rmnet+
+iptables -A natctrl_FORWARD -j DROP
+iptables -A natctrl_nat_POSTROUTING -t nat -o rmnet+ -j MASQUERADE
